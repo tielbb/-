@@ -1,0 +1,164 @@
+窗口边框
+mod+u nono 没有
+mod+y pixel 1 细线
+mod+n normal 标题栏
+
+打开终端 mod+Enter
+关闭窗口 mod+Shift+q
+程序启动器 mod+d
+分类菜单 mod+z
+TOOL BOX mod+Ctrl+b
+音量控制器 mod+Ctrl+m
+#alsamixer
+
+Firefox mod+F2
+#文件管理
+PCManFM mod+F3
+thunar mod+F4
+geany mod+F6
+#文件编辑
+bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+#什么意思
+mocp mod+F5
+#Music on Console
+bindsym $mod+t exec --no-startup-id pkill picom
+bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+picom是一个独立的合成管理器，可以给不带合成功能的窗口管理器（例如 i3）带来淡入淡出、半透明、阴影等视觉效果。
+Dunst是大多数桌面环境提供的通知守护进程的轻量级替代品。
+Dunst is a lightweight replacement for the notification-daemons provided by most desktop environments. 
+Dunst是大多数桌面环境提供的通知守护进程的轻量级替代品。
+Print 截图
+#i3-scrot
+mod+Print 截图（窗口）
+mod+Shift+Print 截图（选择）
+mod+Shift+h i3帮助
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+#xkill是桌面用的杀死图形界面的程序
+
+改变焦点
+mod+j left
+mod+k down
+mod+l up
+mod+semicolon（分号）right
+用方向键
+mod+Left left
+mod+Down down
+mod+Up up
+mod+Right（分号）right
+
+移动焦点窗口
+mod+Shift+j move left
+mod+Shift+k move down
+mod+Shift+l move up
+mod+Shift+semicolon move right
+用方向键
+mod+Shift+Left move left
+mod+Shift+Down move down
+mod+Shift+Up move up
+mod+Shift+Right move right
+
+
+mod+b 切换工作区（切换窗口？）
+mod+Shift+b 切换窗口所在工作区
+
+桌面分割方向
+mod+h 水平
+mod+v 垂直
+mod+q 切换
+
+mod+f 全屏
+
+选择窗口布局
+mod+s 堆叠
+mod+w 选项卡
+mod+e 分割
+
+mod+Shift+space 窗口平铺 / 浮动
+mod+space 在平铺 / 浮动窗口之间改变焦点
+
+# toggle sticky ？？
+bindsym $mod+Shift+s sticky toggle
+
+mod+a 聚焦父容器
+
+mod+Shift+minus(减号) 将焦点窗口移动到暂存器
+mod+minus 显示暂存窗口，有多个将循环
+
+浏览工作区
+mod+Ctrl+Right
+mod+Ctrl+Left
+
+切换工作区
+mod+1~8
+
+移动焦点窗口到工作区
+mod+Ctrl+1~8
+
+移动焦点窗口到工作区（工作区也将激活）
+mod+Shift+1~8
+重新加载文件
+mod+Shift+c
+重启i3，保留会话
+mod+Shift+r
+退出i3
+mod+Shift+e
+
+关机、重启、锁定等
+mod+0
+
+调整窗口大小
+mod+r
+-宽 j Left
++高 k Down
+-高 l Up
++宽 ; Right
+退出 Enter or Escape
+
+锁屏 mod+9
+
+隐藏 / 显示 bar mod+m
+
+调整窗口间隙 mod+Shift+g
+outer（横向） o
++ +5
+- -5
+0 0
+Shift++ all+5
+Shift+- all-5
+Shift+0 all 0
+inner（纵向） i
++ +5
+- -5
+0 0
+Shift++ all+5
+Shift+- all-5
+Shift+0 all 0
+Enter or Esc default
+
+Ctrl+Alt+space 切换输入法
+
+start_conky_maia
+conky -c /usr/share/conky/conky1.10_shortcuts_maia &&
+conky -c /usr/share/conky/conky_maia &&
+Bitstream Vera Sans
+获取所有可见窗口列表
+xprop -root | grep '_NET_CLIENT_LIST_STACKING(WINDOW)'
+xprop -id <id>
+xwininfo -id <id>
+/usr/share/backgrounds/wallpapers-juhraya/
+fc-list | grep "Hack"
+rdesktop -u IEUser -p Passw0rd! -g 1366x768 -r sound  -a 32 -r clipboard:PRIMARYCLIPBOARD -r disk:MyDir=/home/tielbb/shared 192.168.1.74
+rdesktop -u IEUser -p Passw0rd! -r sound  -a 32 -r clipboard:PRIMARYCLIPBOARD -r disk:MyDir=/home/tielbb 192.168.1.88
+删除空白行
+vim
+:g/^\s*$/d
+:v/./d
+shell
+cat -s test.txt 可将 test.txt 文件中的连续空白行替换为一个空白行
+grep -v '^\s*$' test.txt 命令可用于过滤 test.txt 文件中的所有空白行
+
+每隔5行插入空行
+:%s/\(.*\n\)\{5}/\0\r/g
+
+删除重复行
+:sort u
