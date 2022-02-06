@@ -162,3 +162,23 @@ grep -v '^\s*$' test.txt 命令可用于过滤 test.txt 文件中的所有空白
 
 删除重复行
 :sort u
+
+nvim $(fzf)
+隔行插入
+1从第一行开始
+~30每隔30行
+a新增
+\\空行
+-e 不处理文件
+-i 直接处理文件
+sed -e '1~30a\\' 2.txt 
+sed -i '1~30a\\' 2.txt
+
+删除空行删除重复行 隔行插入空行
+grep -v '^\s*$' 1.txt | sort -u | sed -e '1~3a\\'
+
+删除行尾的^M：%s/\r//g
+
+挂载iso
+sudo mount -o loop ~/下载/VBoxGuestAdditions.iso /home/tielbb/cdrom
+sudo umount /home/tielbb/cdrom
