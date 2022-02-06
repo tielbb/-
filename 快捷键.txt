@@ -182,3 +182,5 @@ grep -v '^\s*$' 1.txt | sort -u | sed -e '1~3a\\'
 挂载iso
 sudo mount -o loop ~/下载/VBoxGuestAdditions.iso /home/tielbb/cdrom
 sudo umount /home/tielbb/cdrom
+
+a new line
