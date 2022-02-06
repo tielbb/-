@@ -13,4 +13,6 @@ git remote add origin https://github.com/tielbb/note.git
 git branch -M main
 git push -u origin main
 
-a new line
+git add filename
+git commit -m "****"
+git push
